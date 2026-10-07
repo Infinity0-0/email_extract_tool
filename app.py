@@ -22,7 +22,7 @@ URL_RE = re.compile(r"https?://[^\s<>\"'\[\],;]+", re.I)
 
 
 def parse_links(text):
-    """Kaise bhi paste karo (quotes, commas, alag lines) - links nikal leta hai."""
+    """Kaise bhi paste karo (quotes, commas, alag lines) """
     urls = [u.rstrip(").,") for u in URL_RE.findall(text or "")]
     return list(OrderedDict.fromkeys(urls))
 
@@ -112,11 +112,13 @@ def ui():
 
     with st.sidebar:
         st.header("Settings")
-        workers = st.slider("Ek saath kitne download", 1, 8, 3,
+        workers = st.slider("Ek saath kitne git add app.py email_extractor.py
+git commit -m "kya badla uska chhota sa message"
+git pushdownload", 1, 8, 3,
                             help="Zyada karoge to website block kar sakti hai")
         max_pages = st.number_input("Har PDF ke kitne pages padhne hain (0 = sab)", 0, 500, 0)
-        sab = st.checkbox("Tuta-futa / adhoora email bhi dikhao", value=True)
-        delete_pdf = st.checkbox("Email nikalne ke baad PDF delete karo (disk bachti hai)", value=True)
+        sab = st.checkbox("Incomplted Emails", value=True)
+        delete_pdf = st.checkbox("delete after complete", value=True)
 
     text = st.text_area(
         "Links yaha paste karo (quotes, commas, alag lines - kuch bhi chalega)",
