@@ -1,0 +1,7 @@
+pymupdf
+requests
+beautifulsoup4
+pandas
+openpyxl
+tqdm
+streamlit
