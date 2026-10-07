@@ -112,13 +112,11 @@ def ui():
 
     with st.sidebar:
         st.header("Settings")
-        workers = st.slider("Ek saath kitne git add app.py email_extractor.py
-git commit -m "kya badla uska chhota sa message"
-git pushdownload", 1, 8, 3,
+        workers = st.slider("Ek saath kitne download", 1, 8, 3,
                             help="Zyada karoge to website block kar sakti hai")
         max_pages = st.number_input("Har PDF ke kitne pages padhne hain (0 = sab)", 0, 500, 0)
-        sab = st.checkbox("Incomplted Emails", value=True)
-        delete_pdf = st.checkbox("delete after complete", value=True)
+        sab = st.checkbox("Incompleted Emails", value=True)
+        delete_pdf = st.checkbox("pdf Delete after download", value=True)
 
     text = st.text_area(
         "Links yaha paste karo (quotes, commas, alag lines - kuch bhi chalega)",
